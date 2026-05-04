@@ -59,30 +59,30 @@
   <div class="home-blob-2"></div>
 
   <div class="home-inner">
-    <p class="home-tagline" data-en="Visual Design &amp; Creative Direction" data-ar="تصميم بصري وإخراج إبداعي">Visual Design &amp; Creative Direction</p>
+    <p class="home-tagline" data-en="computer and automation Engineering &amp; UI/UX Design &amp; Graphic Designer" data-ar="هندسة الحواسيب والاتمتة & تصميم الواجهات & التصميم الجرافيكي">Computer and Automation Engineering &amp; UI/UX Design &amp; Graphic Designer</p>
 
     <h1 class="home-headline">
-      <span data-en="Where <em>stories</em><br>bloom into<br>visuals." data-ar="حيث تتفتح<br><em>القصص</em><br>في الصور.">Where <em>stories</em><br>bloom into<br>visuals.</span>
+      <span data-en="Where <em>code</em><br>blooms into<br>experiences." data-ar="حيث يزهر<br><em>الكود</em><br>ليصبح تجربة.">Where <em>code</em><br>blooms into<br>experiences.</span>
     </h1>
 
     <p class="home-para"
-      data-en="I craft motion graphics, social reels, and visual identities that feel handmade, alive, and deeply intentional — built to connect and to last."
-      data-ar="أصنع موشن جرافيك ومقاطع مرئية وهويات بصرية تبدو مصنوعة بالحب — مدروسة وحيّة وتترك أثراً.">
-      I craft motion graphics, social reels, and visual identities that feel handmade, alive, and deeply intentional — built to connect and to last.
+      data-en="I build seamless digital solutions and pixel-perfect interfaces that are deeply intentional — bridging the gap between logic and creative design."
+      data-ar="أبني حلولاً رقمية متكاملة وواجهات متقنة بدقة — أجمع فيها بين منطق الهندسة ولمسات التصميم الإبداعي.">
+      I build seamless digital solutions and pixel-perfect interfaces that are deeply intentional — bridging the gap between logic and creative design.
     </p>
 
     <div class="home-meta">
       <div class="meta-row">
         <span class="meta-dot"></span>
-        <span data-en="Based in Syria" data-ar=" مقيمة في سوريا"> Syria</span>
+        <span data-en="Based in Syria" data-ar="مقيمة في سوريا">Damascus, Syria</span>
       </div>
       <div class="meta-row">
         <span class="meta-dot sage"></span>
-        <span data-en="Motion &amp; Brand Design" data-ar="تصميم موشن وهوية بصرية">Motion &amp; Brand Design</span>
+        <span data-en="Full-stack &amp; UI/UX" data-ar="تطوير البرمجيات وتصميم UI/UX">Full-stack &amp; UI/UX</span>
       </div>
       <div class="meta-row">
         <span class="meta-dot pulse"></span>
-        <span data-en="Available for projects" data-ar="متاحة للمشاريع الجديدة">Available for projects</span>
+        <span data-en="Available for new opportunities" data-ar="متاحة للفرص والمشاريع الجديدة">Available for new opportunities</span>
       </div>
     </div>
   </div>
@@ -93,83 +93,34 @@
 </section>
 
 <!-- ─── PORTFOLIO ─────────────────────────────────────────────── -->
+<!-- Modal for Images -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-modal">&times;</span>
+  <img class="modal-content" id="fullImage">
+</div>
+
 <section id="portfolio">
   <div class="section-inner">
     <div class="section-label reveal" data-en="02 — Portfolio" data-ar="02 — أعمالي">02 — Portfolio</div>
 
     <h2 class="portfolio-headline reveal reveal-delay-1">
-      <span data-en="Work that<br><em>moves</em> people." data-ar="أعمال<br><em>تحرّك</em> القلوب.">Work that<br><em>moves</em> people.</span>
+      <span data-en="Engineering<br><em>meets</em> design." data-ar="حيث تلتقي<br><em>الهندسة</em> بالتصميم.">Engineering<br><em>meets</em> design.</span>
     </h2>
 
     <p class="portfolio-intro reveal reveal-delay-2"
-      data-en="A selection of motion reels, social content, and visual design projects — each built with intention, warmth, and a distinct visual language."
-      data-ar="مجموعة مختارة من المقاطع المرئية والمحتوى الرقمي ومشاريع التصميم — كل منها مبني بنية صادقة ولغة بصرية مميزة.">
-      A selection of motion reels, social content, and visual design projects — each built with intention, warmth, and a distinct visual language.
+      data-en="A showcase of software solutions, UI/UX systems, and digital identities — blending technical logic with creative aesthetics."
+      data-ar="عرض للحلول البرمجية، وأنظمة واجهات المستخدم، والهويات البصرية — حيث يمتزج المنطق التقني بالجمال الإبداعي.">
+      A showcase of software solutions, UI/UX systems, and digital identities — blending technical logic with creative aesthetics.
     </p>
 
     <!-- Reels -->
     <p class="reels-label reveal" data-en="Motion Reels" data-ar="مقاطع الموشن">Motion Reels</p>
-
-    <div class="reels-grid reveal reveal-delay-1">
-      <div class="reel-card">
-        <video src="website/IMG_0409.MP4" autoplay muted loop playsinline></video>
-        <button class="reel-unmute" aria-label="Toggle sound" onclick="toggleMute(this)">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="mute-icon" d="M11 5L6 9H2v6h4l5 4V5z" fill="#2b2118"/>
-            <path class="mute-x" d="M23 9l-6 6M17 9l6 6" stroke="#2b2118" stroke-width="2" stroke-linecap="round" style="display:block"/>
-          </svg>
-        </button>
-      </div>
-      <div class="reel-card">
-        <video src="website/IMG_0410.MP4" autoplay muted loop playsinline></video>
-        <button class="reel-unmute" aria-label="Toggle sound" onclick="toggleMute(this)">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="mute-icon" d="M11 5L6 9H2v6h4l5 4V5z" fill="#2b2118"/>
-            <path class="mute-x" d="M23 9l-6 6M17 9l6 6" stroke="#2b2118" stroke-width="2" stroke-linecap="round" style="display:block"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <div class="reels-grid-bottom reveal reveal-delay-2">
-      <div class="reel-card">
-        <video src="website/IMG_0411.MP4" autoplay muted loop playsinline></video>
-        <button class="reel-unmute" aria-label="Toggle sound" onclick="toggleMute(this)">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="mute-icon" d="M11 5L6 9H2v6h4l5 4V5z" fill="#2b2118"/>
-            <path class="mute-x" d="M23 9l-6 6M17 9l6 6" stroke="#2b2118" stroke-width="2" stroke-linecap="round" style="display:block"/>
-          </svg>
-        </button>
-      </div>
-      <div class="reel-card">
-        <video src="website/IMG_0412.MP4" autoplay muted loop playsinline></video>
-        <button class="reel-unmute" aria-label="Toggle sound" onclick="toggleMute(this)">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="mute-icon" d="M11 5L6 9H2v6h4l5 4V5z" fill="#2b2118"/>
-            <path class="mute-x" d="M23 9l-6 6M17 9l6 6" stroke="#2b2118" stroke-width="2" stroke-linecap="round" style="display:block"/>
-          </svg>
-        </button>
-      </div>
-    </div>
+    <div id="reels-container" class="reels-grid reveal reveal-delay-1"></div>
+    <div id="reels-bottom-container" class="reels-grid-bottom reveal reveal-delay-2"></div>
 
     <!-- Photos -->
-    <p class="photos-label reveal" data-en="Visual Projects" data-ar="مشاريع بصرية">Visual Projects</p>
-
-    <div class="photos-grid reveal reveal-delay-1">
-      <div class="photo-card">
-        <img src="website/photo_2026.jpg" alt="Visual project">
-      </div>
-      <div class="photo-card">
-        <img src="website/meating.jpg" alt="Meeting design">
-      </div>
-      <div class="photo-card wide">
-        <img src="website/match.jpg" alt="Match poster">
-      </div>
-      <div class="photo-card wide">
-        <img src="website/match2.jpg" alt="Match poster 2">
-      </div>
-    </div>
-
+    <p class="photos-label reveal" data-en="Featured Projects" data-ar="مشاريع مختارة">Featured Projects</p>
+    <div id="photos-container" class="photos-grid reveal reveal-delay-1"></div>
   </div>
 </section>
 
@@ -179,28 +130,32 @@
     <div class="section-label reveal" data-en="03 — Contact" data-ar="03 — تواصل">03 — Contact</div>
 
     <h2 class="contact-headline reveal reveal-delay-1">
-      <span data-en="Let's make<br>something<br><em>beautiful</em>." data-ar="لنصنع<br>شيئاً<br><em>جميلاً</em>.">Let's make<br>something<br><em>beautiful</em>.</span>
+      <span data-en="Let's build<br>something<br><em>meaningful</em>." data-ar="لنبتكر<br>شيئاً<br><em>ذا قيمة</em>.">Let's build<br>something<br><em>meaningful</em>.</span>
     </h2>
 
     <p class="contact-sub reveal reveal-delay-2"
-      data-en="Ready to bring your vision to life? Reach out through any of the channels below."
-      data-ar="مستعدة لتحويل رؤيتك إلى واقع؟ تواصل معي عبر أي من القنوات التالية.">
-      Ready to bring your vision to life? Reach out through any of the channels below.
+      data-en="Have a complex technical challenge or a creative vision? Let's bridge the gap together."
+      data-ar="لديك تحدٍ تقني معقد أو رؤية إبداعية؟ تواصل معي لتحويلها الى واقع.">
+      Have a complex technical challenge or a creative vision? Let's bridge the gap together.
     </p>
 
     <div class="contact-card reveal reveal-delay-3">
-      <!-- WhatsApp, Instagram, Phone links remain the same -->
+      <!-- WhatsApp -->
       <a class="contact-link" href="https://wa.me/+963943834931" target="_blank" rel="noopener">
-        <span class="contact-icon wa">...</span>
+        <span class="contact-icon wa">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.886-9.886 9.886m8.415-18.298A11.715 11.715 0 0012.046 0C5.455 0 .092 5.362.089 11.954c0 2.108.55 4.165 1.592 5.97L0 24l6.149-1.613a11.817 11.817 0 005.897 1.57h.005c6.59 0 11.954-5.362 11.957-11.954a11.752 11.752 0 00-3.586-8.301z" fill="white"/>
+          </svg>
+        </span>
         <div class="contact-link-text">
           <span class="contact-link-title" data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
-          <span class="contact-link-detail" data-en="Message me directly" data-ar="راسلي مباشرة">Message me directly</span>
+          <span class="contact-link-detail" data-en="Let's discuss your project" data-ar="لنناقش مشروعك">Let's discuss your project</span>
         </div>
       </a>
 
       <div class="contact-divider"></div>
 
-          <!-- Instagram -->
+      <!-- Instagram -->
       <a class="contact-link" href="https://www.instagram.com/design.by.florabelle?igsh=MWVuYjJrOXI0cTFoZg%3D%3D&utm_source=qr" target="_blank" rel="noopener">
         <span class="contact-icon ig">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -214,21 +169,6 @@
           <span class="contact-link-detail">@design.by.florabelle</span>
         </div>
       </a>
-<!-- 
-      <div class="contact-divider"></div> -->
-
-      <!-- Phone -->
-      <!-- <a class="contact-link" href="tel:+963000000000">
-        <span class="contact-icon ph">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="white"/>
-          </svg>
-        </span>
-        <div class="contact-link-text">
-          <span class="contact-link-title" data-en="Phone" data-ar="هاتف">Phone</span>
-          <span class="contact-link-detail" data-en="Call or text" data-ar="اتصال أو رسالة">Call or text</span>
-        </div>
-      </a> -->
     </div>
   </div>
 </section>
