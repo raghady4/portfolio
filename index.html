@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Florabelle</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ─── NAV ─────────────────────────────────────────────────── -->
+<nav id="main-nav">
+  <a class="nav-logo" href="#home">
+    <img src="website/logo.jpg" alt="Florabelle logo">
+    <span class="nav-logo-name" data-en="Florabelle" data-ar="فلورابيل">Florabelle</span>
+  </a>
+
+  <div style="display:flex;align-items:center;gap:4px;">
+    <div class="nav-links">
+      <a href="#home"      data-en="Home"      data-ar="الرئيسية">Home</a>
+      <a href="#portfolio" data-en="Portfolio" data-ar="أعمالي">Portfolio</a>
+      <a href="#contact"   data-en="Contact"   data-ar="تواصل">Contact</a>
+    </div>
+    <button class="lang-btn" id="lang-toggle" aria-label="Toggle language">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1"/>
+        <ellipse cx="6.5" cy="6.5" rx="2.8" ry="5.5" stroke="currentColor" stroke-width="1"/>
+        <line x1="1" y1="5" x2="12" y2="5" stroke="currentColor" stroke-width="1"/>
+        <line x1="1" y1="8.5" x2="12" y2="8.5" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      <span id="lang-label">AR</span>
+    </button>
+    <button class="ham" id="ham-btn" aria-label="Menu">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="22" height="1.5" rx=".75" fill="#2b2118"/>
+        <rect y="7.25" width="22" height="1.5" rx=".75" fill="#2b2118"/>
+        <rect y="14.5" width="22" height="1.5" rx=".75" fill="#2b2118"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- mobile drawer -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#home"      onclick="closeMenu()" data-en="Home"      data-ar="الرئيسية">Home</a>
+  <a href="#portfolio" onclick="closeMenu()" data-en="Portfolio" data-ar="أعمالي">Portfolio</a>
+  <a href="#contact"   onclick="closeMenu()" data-en="Contact"   data-ar="تواصل">Contact</a>
+</div>
+
+<!-- ─── HOME ─────────────────────────────────────────────────── -->
+<section id="home">
+  <div class="home-blob"></div>
+  <div class="home-blob-2"></div>
+
+  <div class="home-inner">
+    <p class="home-tagline" data-en="Visual Design &amp; Creative Direction" data-ar="تصميم بصري وإخراج إبداعي">Visual Design &amp; Creative Direction</p>
+
+    <h1 class="home-headline">
+      <span data-en="Where <em>stories</em><br>bloom into<br>visuals." data-ar="حيث تتفتح<br><em>القصص</em><br>في الصور.">Where <em>stories</em><br>bloom into<br>visuals.</span>
+    </h1>
+
+    <p class="home-para"
+      data-en="I craft motion graphics, social reels, and visual identities that feel handmade, alive, and deeply intentional — built to connect and to last."
+      data-ar="أصنع موشن جرافيك ومقاطع مرئية وهويات بصرية تبدو مصنوعة بالحب — مدروسة وحيّة وتترك أثراً.">
+      I craft motion graphics, social reels, and visual identities that feel handmade, alive, and deeply intentional — built to connect and to last.
+    </p>
+
+    <div class="home-meta">
+      <div class="meta-row">
+        <span class="meta-dot"></span>
+        <span data-en="Based in Syria" data-ar=" مقيمة في سوريا"> Syria</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-dot sage"></span>
+        <span data-en="Motion &amp; Brand Design" data-ar="تصميم موشن وهوية بصرية">Motion &amp; Brand Design</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-dot pulse"></span>
+        <span data-en="Available for projects" data-ar="متاحة للمشاريع الجديدة">Available for projects</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-photo">
+    <img src="website/logo.jpg" alt="Florabelle">
+  </div>
+</section>
+
+<!-- ─── PORTFOLIO ─────────────────────────────────────────────── -->
+<section id="portfolio">
+  <div class="section-inner">
+    <div class="section-label reveal" data-en="02 — Portfolio" data-ar="02 — أعمالي">02 — Portfolio</div>
+
+    <h2 class="portfolio-headline reveal reveal-delay-1">
+      <span data-en="Work that<br><em>moves</em> people." data-ar="أعمال<br><em>تحرّك</em> القلوب.">Work that<br><em>moves</em> people.</span>
+    </h2>
+
+    <p class="portfolio-intro reveal reveal-delay-2"
+      data-en="A selection of motion reels, social content, and visual design projects — each built with intention, warmth, and a distinct visual language."
+      data-ar="مجموعة مختارة من المقاطع المرئية والمحتوى الرقمي ومشاريع التصميم — كل منها مبني بنية صادقة ولغة بصرية مميزة.">
+      A selection of motion reels, social content, and visual design projects — each built with intention, warmth, and a distinct visual language.
+    </p>
+
+    <!-- Reels -->
+    <p class="reels-label reveal" data-en="Motion Reels" data-ar="مقاطع الموشن">Motion Reels</p>
+
+    <div class="reels-grid reveal reveal-delay-1">
+      <div class="reel-card">
+        <video src="website/IMG_0409.MP4" autoplay muted loop playsinline></video>
+        <button class="reel-unmute" aria-label="Toggle sound" onclick="toggleMute(this)">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="mute-icon" d="M11 5L6 9H2v6h4l5 4V5z" fill="#2b2118"/>
+            <path class="mute-x" d="M23 9l-6 6M17 9l6 6" stroke="#2b2118" stroke-width="2" stroke-linecap="round" style="display:block"/>
+          </svg>
+        </button>
+      </div>
+      <div class="reel-card">
+        <video src="website/IMG_0410.MP4" autoplay muted loop playsinline></video>
+        <button class="reel-unmute" aria-label="Toggle sound" onclick="toggleMute(this)">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="mute-icon" d="M11 5L6 9H2v6h4l5 4V5z" fill="#2b2118"/>
+            <path class="mute-x" d="M23 9l-6 6M17 9l6 6" stroke="#2b2118" stroke-width="2" stroke-linecap="round" style="display:block"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="reels-grid-bottom reveal reveal-delay-2">
+      <div class="reel-card">
+        <video src="website/IMG_0411.MP4" autoplay muted loop playsinline></video>
+        <button class="reel-unmute" aria-label="Toggle sound" onclick="toggleMute(this)">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="mute-icon" d="M11 5L6 9H2v6h4l5 4V5z" fill="#2b2118"/>
+            <path class="mute-x" d="M23 9l-6 6M17 9l6 6" stroke="#2b2118" stroke-width="2" stroke-linecap="round" style="display:block"/>
+          </svg>
+        </button>
+      </div>
+      <div class="reel-card">
+        <video src="website/IMG_0412.MP4" autoplay muted loop playsinline></video>
+        <button class="reel-unmute" aria-label="Toggle sound" onclick="toggleMute(this)">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="mute-icon" d="M11 5L6 9H2v6h4l5 4V5z" fill="#2b2118"/>
+            <path class="mute-x" d="M23 9l-6 6M17 9l6 6" stroke="#2b2118" stroke-width="2" stroke-linecap="round" style="display:block"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Photos -->
+    <p class="photos-label reveal" data-en="Visual Projects" data-ar="مشاريع بصرية">Visual Projects</p>
+
+    <div class="photos-grid reveal reveal-delay-1">
+      <div class="photo-card">
+        <img src="website/photo_2026.jpg" alt="Visual project">
+      </div>
+      <div class="photo-card">
+        <img src="website/meating.jpg" alt="Meeting design">
+      </div>
+      <div class="photo-card wide">
+        <img src="website/match.jpg" alt="Match poster">
+      </div>
+      <div class="photo-card wide">
+        <img src="website/match2.jpg" alt="Match poster 2">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── CONTACT ─────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label reveal" data-en="03 — Contact" data-ar="03 — تواصل">03 — Contact</div>
+
+    <h2 class="contact-headline reveal reveal-delay-1">
+      <span data-en="Let's make<br>something<br><em>beautiful</em>." data-ar="لنصنع<br>شيئاً<br><em>جميلاً</em>.">Let's make<br>something<br><em>beautiful</em>.</span>
+    </h2>
+
+    <p class="contact-sub reveal reveal-delay-2"
+      data-en="Ready to bring your vision to life? Reach out through any of the channels below."
+      data-ar="مستعدة لتحويل رؤيتك إلى واقع؟ تواصل معي عبر أي من القنوات التالية.">
+      Ready to bring your vision to life? Reach out through any of the channels below.
+    </p>
+
+    <div class="contact-card reveal reveal-delay-3">
+      <!-- WhatsApp, Instagram, Phone links remain the same -->
+      <a class="contact-link" href="https://wa.me/+963943834931" target="_blank" rel="noopener">
+        <span class="contact-icon wa">...</span>
+        <div class="contact-link-text">
+          <span class="contact-link-title" data-en="WhatsApp" data-ar="واتساب">WhatsApp</span>
+          <span class="contact-link-detail" data-en="Message me directly" data-ar="راسلي مباشرة">Message me directly</span>
+        </div>
+      </a>
+
+      <div class="contact-divider"></div>
+
+          <!-- Instagram -->
+      <a class="contact-link" href="https://www.instagram.com/design.by.florabelle?igsh=MWVuYjJrOXI0cTFoZg%3D%3D&utm_source=qr" target="_blank" rel="noopener">
+        <span class="contact-icon ig">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="white" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="2"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="white"/>
+          </svg>
+        </span>
+        <div class="contact-link-text">
+          <span class="contact-link-title" data-en="Instagram" data-ar="إنستغرام">Instagram</span>
+          <span class="contact-link-detail">@design.by.florabelle</span>
+        </div>
+      </a>
+<!-- 
+      <div class="contact-divider"></div> -->
+
+      <!-- Phone -->
+      <!-- <a class="contact-link" href="tel:+963000000000">
+        <span class="contact-icon ph">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="white"/>
+          </svg>
+        </span>
+        <div class="contact-link-text">
+          <span class="contact-link-title" data-en="Phone" data-ar="هاتف">Phone</span>
+          <span class="contact-link-detail" data-en="Call or text" data-ar="اتصال أو رسالة">Call or text</span>
+        </div>
+      </a> -->
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo" data-en="Florabelle" data-ar="فلورابيل">Florabelle</span>
+    <span class="footer-copy" data-en="2026 — All rights reserved" data-ar="2026 — جميع الحقوق محفوظة">2026 — All rights reserved</span>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
