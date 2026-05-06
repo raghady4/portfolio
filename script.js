@@ -4,20 +4,20 @@ let isAr = localStorage.getItem('florabelle-lang') === 'ar';
 
 // بيانات المعرض (للصفحة الرئيسية فقط)
 const portfolioData = {
-  reels: [
-    { src: "website/IMG_0409.MP4" },
-    { src: "website/IMG_0410.MP4" },
-    { src: "website/IMG_0411.MP4" },
-    { src: "website/IMG_0412.MP4" }
+  reels: [{
+      src: "website/IMG_0409.MP4"
+    },
+    {
+      src: "website/IMG_0410.MP4"
+    },
+    {
+      src: "website/IMG_0411.MP4"
+    },
+    {
+      src: "website/IMG_0412.MP4"
+    }
   ],
   photos: [
-    {
-      src: "website/signup_dark.jpg",
-      altEn: "Syria Digital System",
-      altAr: "النظام الرقمي السوري",
-      wide: true,
-      link: "case-study-syria.html"
-    },
     {
       src: "website/photo_2026.jpg",
       altEn: "Software Integration Project",
@@ -35,7 +35,14 @@ const portfolioData = {
       altEn: "Smart System Interface",
       altAr: "واجهة نظام ذكي",
       wide: false
-    }
+    },
+    {
+      src: "website/signup_dark.jpg",
+      altEn: "Syria Digital System",
+      altAr: "النظام الرقمي السوري",
+      wide: true,
+      link: "case-study-syria.html"
+    },
   ]
 };
 
@@ -44,7 +51,7 @@ function applyLang() {
   // تطبيق الاتجاه واللغة
   htmlEl.lang = isAr ? 'ar' : 'en';
   htmlEl.dir = isAr ? 'rtl' : 'ltr';
-  
+
   const langLabel = document.getElementById('lang-label');
   if (langLabel) langLabel.textContent = isAr ? 'EN' : 'AR';
 
@@ -55,7 +62,7 @@ function applyLang() {
 
     // دعم العناوين التي تحتوي على وسم <em> أو <br>
     const isRichText = el.tagName === 'SPAN' && (el.closest('h1') || el.closest('h2'));
-    
+
     if (isRichText) {
       el.innerHTML = val;
     } else {
@@ -73,7 +80,9 @@ function applyLang() {
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('main-nav');
   if (nav) nav.classList.toggle('scrolled', window.scrollY > 10);
-}, { passive: true });
+}, {
+  passive: true
+});
 
 // 2. القائمة الجانبية للموبايل
 const hamBtn = document.getElementById('ham-btn');
@@ -97,7 +106,9 @@ function initScrollReveal() {
         observer.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, {
+    threshold: 0.12
+  });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
@@ -137,7 +148,8 @@ function renderReels() {
   const bottomContainer = document.getElementById('reels-bottom-container');
   if (!topContainer) return;
 
-  let topHTML = '', bottomHTML = '';
+  let topHTML = '',
+    bottomHTML = '';
 
   portfolioData.reels.forEach((reel, index) => {
     const html = `
@@ -161,35 +173,59 @@ function renderPhotos() {
   const container = document.getElementById('photos-container');
   if (!container) return;
 
-  container.innerHTML = portfolioData.photos.map(photo => {
+  let finalHTML = '';
+
+  portfolioData.photos.forEach(photo => {
     const wideClass = photo.wide ? ' wide' : '';
     const altText = isAr ? photo.altAr : photo.altEn;
+
+    if (photo.link) {
+      const labelEn = "UI/UX Case Study";
+      const labelAr = "دراسة حالة واجهات المستخدم";
+      finalHTML += `
+        <div class="special-section-label reveal" data-en="${labelEn}" data-ar="${labelAr}">
+          ${isAr ? labelAr : labelEn}
+        </div>`;
+    }
+
     
     if (photo.link) {
-      return `
-        <a href="${photo.link}" class="photo-card${wideClass}">
+      finalHTML += `
+        <a href="${photo.link}" class="photo-card${wideClass} has-link">
           <img src="${photo.src}" alt="${altText}">
+          <div class="photo-overlay">
+            <span data-en="View Case Study" data-ar="عرض دراسة الحالة">
+              ${isAr ? 'عرض دراسة الحالة' : 'View Case Study'}
+            </span>
+            <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
         </a>`;
     } else {
-      return `
+      finalHTML += `
         <div class="photo-card${wideClass}" onclick="openModal(this)">
           <img src="${photo.src}" alt="${altText}">
         </div>`;
     }
-  }).join('');
-}
+  });
 
+  container.innerHTML = finalHTML;
+  
+
+  if (typeof initScrollReveal === 'function') initScrollReveal();
+}
 /* ─── INITIALIZATION ─────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
-  // تشغيل المحرك الأساسي
+  
   applyLang();
   initScrollReveal();
 
-  // تشغيل عناصر الصفحة الرئيسية فقط إذا وجدت
+
   renderReels();
   renderPhotos();
 
-  // إضافة حدث زر تغيير اللغة
+ 
   const langToggle = document.getElementById('lang-toggle');
   if (langToggle) {
     langToggle.addEventListener('click', () => {
@@ -200,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// إغلاق المودال عند الضغط على Esc
+
 document.addEventListener('keydown', (e) => {
   if (e.key === "Escape") closeModal();
 });

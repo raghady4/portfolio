@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -113,9 +114,15 @@
       A showcase of software solutions, UI/UX systems, and digital identities — blending technical logic with creative aesthetics.
     </p>
 
+
     <!-- Reels -->
     <p class="reels-label reveal" data-en="Motion Reels" data-ar="مقاطع الموشن">Motion Reels</p>
-    <div id="reels-container" class="reels-grid reveal reveal-delay-1"></div>
+    <div id="reels-container" class="reels-grid reveal reveal-delay-1">        <button class="reel-unmute" aria-label="Toggle sound" onclick="toggleMute(this)">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="mute-icon" d="M11 5L6 9H2v6h4l5 4V5z" fill="#2b2118"/>
+            <path class="mute-x" d="M23 9l-6 6M17 9l6 6" stroke="#2b2118" stroke-width="2" stroke-linecap="round" style="display:block"/>
+          </svg>
+        </button></div>
     <div id="reels-bottom-container" class="reels-grid-bottom reveal reveal-delay-2"></div>
 
     <!-- Photos -->
