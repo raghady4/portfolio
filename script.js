@@ -36,6 +36,55 @@ const portfolioData = {
       altAr: "واجهة نظام ذكي",
       wide: false
     },
+        {
+      src: "website/Gym-list-price.jpg",
+      altEn: "gym list price",
+      altAr: "قائمة أسعار صالة رياضية",
+      wide: false
+    },
+        {
+      src: "website/larein.jpg",
+      altEn: "graduation design",
+      altAr: "تصميم تخرج",
+      wide: false
+    },
+        {
+      src: "website/my-cafe.jpg",
+      altEn: "logo for cafe",
+      altAr: "شعار لمقهى",
+      wide: false
+    },
+        {
+      src: "website/cafe-list-price.jpg",
+      altEn: "Cafe Price List",
+      altAr: "قائمة أسعار المقهى",
+      wide: false
+    },
+        {
+      src: "website/cryo.png",
+      altEn: "Cryotherapy machine",
+      altAr: " جهاز العلاج بالتبريد",
+      wide: false
+    },
+        {
+      src: "website/instructions.jpg",
+      altEn: "cryotherapy machine instructions before use",
+      altAr: "تعليمات جهاز العلاج بالتبريد قبل الاستخدام",
+      wide: false
+    },      
+      {
+      src: "website/موانع-الاستخدام.png",
+      altEn: "Cryotherapy machine contraindications",
+      altAr: "موانع استخدام جهاز العلاج بالتبريد",
+      wide: false
+    },
+        {
+      src: "website/nutrition-price-list.jpg",
+      altEn: "Nutrition Price List",
+      altAr: "قائمة أسعار التغذية",
+      wide: false
+    },
+    
     {
       src: "website/signup_dark.jpg",
       altEn: "Syria Digital System",
